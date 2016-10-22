@@ -1,0 +1,39 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: arial, sans-serif;
+}
+
+body {
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    padding-top: 2em;
+}
+
+.buttons {
+    display: flex;
+}
+
+.button {
+    background-color: #9BC850;
+    border-radius: 8px;
+    box-sizing: border-box;
+	color: #fff;
+    display: block;
+	font-size: 1.2em;
+    margin: 0 1em 0.3em 0;
+	padding: 0.5em 1em;
+    text-align: center;
+    flex: 1;
+}
+
+.button-admin {
+	background-color: #A62E5C;
+}

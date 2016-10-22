@@ -1,0 +1,30 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: arial, sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 1em;
+}
+
+.item {
+    background-color: #A62E5C;
+	color: #fff;
+    box-sizing: border-box;
+	font-size: 1.2em;
+	padding: 1em;
+	text-align: center;
+    flex: 1;
+}
+
+.item:nth-child(even) {
+	background-color: #9BC850;
+}
+
+.item strong {
+	display: block;
+	font-size: 130%;
+}	
