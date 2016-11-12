@@ -1,0 +1,435 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>jQuery: Getting Started</title>
+        <link rel="icon" type="image/png" href="../favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="../js/vendor/highlight/styles/github.css" />
+        <link rel="stylesheet" href="../css/main.css" type="text/css" />
+        <script type="text/javascript" src="../js/vendor/jquery-1.11.2.js"></script>
+        <script type="text/javascript" src="../js/vendor/highlight/highlight.pack.js"></script>
+        <script type="text/javascript" src="../js/vendor/bootstrap.js"></script>
+        <script type="application/javascript" src="../js/app/utils.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">jQuery: Getting Started</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="hello-world.html">Hello World</a></li>
+                <li><a href="example-page.html">Example Page</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container push-down-top-md">
+        <div id="demo-content-main-container" class="demo-markup">
+    
+    <div role="tabpanel">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#demo-content-container" aria-controls="about-container" role="tab" data-toggle="tab">Content</a></li>
+          <li role="presentation"><a href="#demo-markup-container" aria-controls="markup-container" role="tab" data-toggle="tab">HTML</a></li>
+          <li role="presentation"><a href="#demo-css-container" aria-controls="markup-container" role="tab" data-toggle="tab">CSS</a></li>
+          <li role="presentation"><a href="#demo-js-container" aria-controls="markup-container" role="tab" data-toggle="tab">JavaScript</a></li> 
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+
+          <div role="tabpanel" class="tab-pane active" id="demo-content-container"><div id="house-detail">
+<div class="logo">
+    <a href="http://codedhomes.com">
+        <img src="../img/coded-homes-logo-sm.png"
+             title="Coded Homes"
+             alt="Coded Homes" />
+    </a>
+</div> 
+<div class="row">
+    <div class="col-sm-5">
+        <img src="../img/house.png" 
+             class="img-responsive img-thumbnail" />
+        <h3>Showing Date</h3>
+        <input type="date" class="form-control" id="showing-date" />
+        
+        <div class="form-section">
+            <input type="checkbox" id="owner-present-check" />
+            <label for="home-owner-present-check">Owner present?</label>
+        </div>
+        
+        <h3>Notes</h3>
+        <textarea id="notes-box" class="form-control" placeholder="Notes"></textarea>
+
+        <div class="form-section">
+            <h3>Availability:</h3>
+            <input type="radio" name="available" value="immediate" id="avail-immed-radio" />
+            <label for="avail-immed-radio">Immediate</label> 
+            <br />
+            <input type="radio" name="available" value="delayed" id="avail-delayed-radio" />
+            <label for="avail-delayed-radio">Delayed</label> 
+        </div>
+        
+        
+        <div class="command">
+            <button id="cancel-button" class="btn btn-link">Cancel</button>
+            <button id="save-button" class="btn btn-default btn-primary">Save</button>
+        </div>
+    </div>
+    <div class="col-sm-7"> 
+        <div class="street-address">
+            <h2 class="expanded">15509 Main Street</h2>
+            Anytown, CO 80525
+        </div>
+        <table class="table table-default table-striped">
+            <tbody>
+                <tr>
+                    <th>Bedrooms</th>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <th>Bathrooms</th>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <th>Square Feet</th>
+                    <td>4,500</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="lead">In a quiet neighborhood next to excellent schools.</p>
+        <h3>Special Features</h3>
+        <ul id="special-features">
+            <li data-feature-id="131">Crown molding throughout</li>
+            <li data-feature-id="137">Granite counter tops</li>
+            <li data-feature-id="188">New carpet and title</li>
+            <li data-feature-id="221">Shutter blinds on all windows</li>
+        </ul>
+    </div>
+</div>
+</div></div>
+      
+          <div role="tabpanel" class="tab-pane fade" id="demo-markup-container">
+              <pre><code id="demo-markup" class="html"></code></pre>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="demo-css-container">
+              <pre><code id="demo-css" class="css">.hide-me {
+  display:none;
+}
+
+.highlight {
+    background-color: #ff9;
+}
+
+.bordered {
+    border:6px solid #999;
+    border-radius: 6px;
+}
+              </code></pre>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="demo-js-container">
+              
+            <div class="alert alert-info alert-dismissible console-message" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Tip:</strong> The browser is your development environment! Open the developer tools
+                by pressing <code>F12</code> and paste the code you see below into the
+                console.
+            </div>
+              
+            <div class="module-title"><a data-toggle="collapse" href="#intro-code" aria-expanded="false">Introduction</a></div>
+            <div class="collapse" id="intro-code">
+                
+                <div class="code-label">Raw DOM: Selection</div>
+                <pre><code class="javascript">var h2 = document.getElementsByTagName('h2');</code></pre>
+                
+                <div class="code-label">Raw DOM: Add Class</div>
+                <pre><code class="javascript">h2[0].className += ' highlight';</code></pre>
+                
+                <div class="code-label">Raw DOM: Remove Class</div>
+                <pre><code class="javascript">var classNames = h2[0].className.split(' ');
+
+classNames.splice(classNames.indexOf('highlight'), 1);
+
+h2[0].className = classNames.join(' ');</code></pre> 
+                
+                <div class="code-label">jQuery: Hello World</div>
+                <pre><code class="javascript">$(function(){
+   console.log('Hello World!');
+});</code></pre>
+            </div>
+              
+              <!-- -------------------------------------------------------------------- -->
+              
+              <div class="module-title"><a data-toggle="collapse" href="#anatomy-code" aria-expanded="false">Anatomy of a jQuery Command</a></div>
+            <div class="collapse" id="anatomy-code">
+                <div class="code-label">Set Length <a href="http://api.jquery.com/length/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a> / Working with Sets</div>
+<pre><code class="javascript">var divs = $('div');
+
+var length = divs.length;
+
+var h2s = $('h2');</code></pre>
+                
+                <div class="code-label">Select Nothing <a href="http://api.jquery.com/category/selectors/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+<pre><code class="javascript">var nomatch = $('nomatch');</code></pre>
+
+                <div class="code-label">Getter/Setter Functions <a href="http://learn.jquery.com/using-jquery-core/working-with-selections/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+<pre><code class="javascript">var text = $('h2').text();
+
+console.log(text);
+   
+$('h2').text('15509 Main Avenue');</code></pre>
+            </div>
+              
+              <!-- -------------------------------------------------------------------- -->
+              
+            <div class="module-title"><a data-toggle="collapse" href="#parts-code" aria-expanded="false">Finding Parts of the Page</a></div>
+            <div class="collapse" id="parts-code">
+                <div class="code-label">CSS3 Selectors 
+                    <a href="http://api.jquery.com/category/selectors/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a>
+                </div>
+<pre><code class="javascript">var buttons = $('button');
+
+var saveButton = $('#save-button'); 
+
+var buttons = $('.btn');
+
+var firstFeature = $('#special-features li:first-child');
+
+var webLinks = $('a[href^="http://"]');
+</code></pre>
+                
+            <div class="code-label">HTML Literals <a href="http://api.jquery.com/category/selectors/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+<pre><code class="javascript">var div = $('&lt;div&gt;This is a DIV&lt;/div&gt;');
+
+var elements = $(['&lt;span>one&lt;/span&gt;', '&lt;div&gt;two&lt;/div&gt;']);
+</code></pre>
+                
+            <div class="code-label">DOM Elements <a href="http://api.jquery.com/category/selectors/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">var detail = $(document.getElementById('house-detail'));
+
+var titles = $([document.querySelector('h2'),
+                document.querySelector('h3')]);
+</code></pre>
+                
+            <div class="code-label">Find Elements <a href="http://api.jquery.com/find/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">var primary = $('.col-sm-5')
+                 .find('button[class*="btn-primary"]');
+</code></pre>
+                
+            <div class="code-label">Parents <a href="http://api.jquery.com/parents/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">var parents = $('tbody').parents();
+
+var table = $('tbody').parents('table');
+</code></pre>
+                
+            <div class="code-label">Children <a href="http://api.jquery.com/children/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">var children = $('tbody').children();</code></pre>
+                
+            </div>
+              
+        <!-- -------- Style and Effects ----------------------------------------- -->
+              
+        <div class="module-title"><a data-toggle="collapse" href="#style-code" aria-expanded="false">Adding Some Style and Effects with a Little Class</a></div>
+        <div class="collapse" id="style-code">
+            
+            <div class="code-label">attr <a href="http://api.jquery.com/attr/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">$('h2').attr('style', 'background-color:#ff3');</code></pre>
+            
+            <div class="code-label">CSS <a href="http://api.jquery.com/css/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">var bg = $('h2').css('backgroundColor');
+ 
+console.log(bg);
+
+$('h2').css({ backgroundColor: '#f60' });
+
+bg = $('h2').css('background-color');
+
+console.log(bg);</code></pre>
+            
+            <div class="code-label">Add &amp; Remove Class <a href="http://api.jquery.com/addclass/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">$('h2').addClass('highlight');
+
+$('h2').removeClass('highlight');
+
+$('h2').addClass(function(){
+    return 'bordered';
+});
+
+$('h2').removeClass(function(){
+    return 'bordered';
+});</code></pre>
+            
+            <div class="code-label">Hide, Show &amp; Toggle <a href="http://api.jquery.com/addclass/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">$('h2').hide();
+
+$('h2').show();
+
+$('h2').toggle();
+
+$('h2').toggle(function(){
+    console.log('toggled');
+});</code></pre>
+            
+            <div class="code-label">Fading</div>
+            <pre><code class="javascript">$('h2').fadeOut();
+
+$('h2').fadeIn();
+
+$('h2').fadeOut('fast');
+
+$('h2').fadeIn(function(){
+    $('#special-features').addClass('highlight');
+});</code></pre>
+            
+        </div>
+          
+        <!-- --------- Events --------------------------------------------------- -->
+          
+        <div class="module-title"><a data-toggle="collapse" href="#events-code" aria-expanded="false">When Events Happen</a></div>
+        <div class="collapse" id="events-code">
+            
+            <div class="code-label">Document Ready <a href="https://api.jquery.com/ready/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">$(function(){
+    console.log('the page is ready');
+});</code></pre>
+            
+            <div class="code-label"><code>on</code> Event <a href="https://api.jquery.com/on/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">$('#save-button').on('click', function(){
+    console.log('the save button is clicked');
+});</code></pre>
+            
+            <div class="code-label"><code>off</code> Event <a href="https://api.jquery.com/off/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">$('#save-button').off('click');</code></pre>
+            
+            <div class="code-label"><code>one</code> Event <a href="https://api.jquery.com/one/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">$('#save-button').one('click', function(){
+    console.log('the save button is clicked');
+});</code></pre>
+            
+            <div class="code-label"><code>click</code> Event <a href="https://api.jquery.com/click/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">$('#save-button').click(function(){
+    console.log('the save button is clicked');
+});</code></pre>
+            
+            <div class="code-label"><code>blur</code> Event <a href="https://api.jquery.com/blur/" target="_blank" title="API Documentation" class="btn btn-link btn-xs">?</a></div>
+            <pre><code class="javascript">$('#save-button').blur(function(){
+    console.log('no more love for the save button :(');
+});</code></pre>
+            
+        </div>
+        
+        <!-- -------- Chaining -------------------------------------------------- -->
+          
+        <div class="module-title"><a data-toggle="collapse" href="#chaining-code" aria-expanded="false">Chaining Makes It Easier</a></div>
+        <div class="collapse" id="chaining-code">
+            
+            <div class="code-label">Without Chaining: Re-selection (avoid this approach)</div>
+            <pre><code class="javascript">$('#special-features li').width('50%');
+$('#special-features li').height('200px')
+$('#special-features li').addClass('highlight bordered');</code></pre>
+            
+            <div class="code-label">Without Chaining: Temp Variable</div>
+            <pre><code class="javascript">var features = $('#special-features li');
+features.width('50%');
+features.height('200px')
+features.addClass('highlight bordered');</code></pre>
+            
+            <div class="code-label">Sets (no variable)</div>
+            <pre><code class="javascript">$('#special-features li')
+    .width('50%')
+    .height('200px')
+    .addClass('highlight bordered') 
+    .each(function(index, item){
+      var $item = $(item);
+      $item.text($item.text() + ' ' + 
+               $item.attr('data-feature-id'));
+    });</code></pre>
+            
+            <div class="code-label">Sets (with a variable)</div>
+            <pre><code class="javascript">var items = $('#special-features li');
+  
+items.width('50%')
+     .height('200px')
+     .addClass('highlight bordered')
+     .each(function(index, item){
+          var $item = $(item);
+          $item.text($item.text() + ' ' + 
+             $item.attr('data-feature-id'));
+     });</code></pre>
+            
+            <div class="code-label">Single Match</div>
+            <pre><code class="javascript">$('#save-button')
+  .click(function(){
+    console.log('clicked');
+  })
+  .addClass('bordered');</code></pre>
+            
+        </div>
+              
+        <!-- -------- Forms ----------------------------------------------------- -->
+        
+        <div class="module-title"><a data-toggle="collapse" href="#forms-code" aria-expanded="false">Working with User Input</a></div>
+        <div class="collapse" id="forms-code">
+            
+            <div class="code-label">Textboxes/Textareas</div>
+            <pre><code class="javascript">$('#notes-box').val('Great house');
+            
+var notes = $('#notes-box').val();
+
+console.log(notes);</code></pre>
+            
+            <div class="code-label">Date</div>
+            <pre><code class="javascript">$('#showing-date').val('<span class="hljs-string" id="date-container"></span>');
+            
+var date = $('#showing-date').val();
+
+console.log(date);</code></pre>
+        
+            <div class="code-label">Checkboxes</div>
+            <pre><code class="javascript">$('#owner-present-check').prop('checked', true);
+            
+$('#owner-present-check').prop('checked', false);</code></pre>
+            
+            <div class="code-label">Radio Buttons</div>
+            <pre><code class="javascript">var status = $('input[name="available"]:checked').val();
+
+console.log(status);</code></pre>
+            
+        </div>
+
+        <!-- -------------------------------------------------------------------- -->
+
+      </div>
+    </div>
+</div>
+<script>
+$(function(){
+    $('#date-container').text(util.getDateString());
+});
+</script>
+    </div>
+        
+        <footer>Created by <a href="http://craigshoemaker.net/about" target="_blank">Craig Shoemaker</a> for <a href="http://www.pluralsight.com/author/craig-shoemaker" target="_blank">Pluralsight</a></footer>
+
+    </body>
+</html>

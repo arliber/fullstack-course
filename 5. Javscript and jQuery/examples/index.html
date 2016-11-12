@@ -1,0 +1,101 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>jQuery: Getting Started</title>
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="js/vendor/highlight/styles/github.css" />
+        <link rel="stylesheet" href="css/main.css" type="text/css" />
+        <script type="text/javascript" src="js/vendor/jquery-1.11.2.js"></script>
+        <script type="text/javascript" src="js/vendor/highlight/highlight.pack.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap.js"></script>
+        <script type="application/javascript" src="js/app/utils.js"></script>
+        
+    </head>
+    <body data-ng-app="app">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">jQuery: Getting Started</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="pages/hello-world.html">Hello World</a></li>
+                <li><a href="pages/example-page.html">Example Page</a></li>
+                <li><a href="pages/resources.html">Resources</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container push-down-top-lg">
+        <h1 class="text-center big">Welcome</h1>
+        <p class="lead text-center">Get started with jQuery by using the following demos. All you need is right in your browser!</p>
+        
+        <div class="linked-rows">
+        <a href="pages/hello-world.html">
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <h2>Hello World</h2>
+                    <p class="small">Learn about one of the simplest jQuery commands possible.</p>
+                </div>
+                <div class="col-sm-6">
+                    <img src="img/hello-world.png" class="img-responsive" />
+                </div>
+            </div>
+        </a>
+        
+        <a href="pages/example-page.html">
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <img src="img/demo.png" class="img-responsive pull-right" />
+                </div>
+                <div class="col-sm-6">
+                    <h2>Using jQuery</h2>
+                    <p class="small">
+                        Interact with an example page by opening up the browser's console window 
+                        (<code>F12</code> in most browsers) 
+                        and executing jQuery commands directly against the page.
+                    </p>
+                    <p class="small">For example, try:</p>
+                    <p class="small"><code>$('h2').addClass('highlight');</code></p>
+                </div>
+            </div>
+        </a>
+        
+        <a href="pages/resources.html">
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <h2>Resources</h2>
+                    <p class="small">Links to all the scripts you need to get started with jQuery in your applications.</p>
+                </div>
+                <div class="col-sm-6">
+                    <img src="img/resources.png" class="img-responsive" />
+                </div>
+            </div>
+        </a>
+        </div>
+        
+        <footer>
+            Created by <a href="http://craigshoemaker.net/about" target="_blank">Craig Shoemaker</a> for 
+            <a href="http://www.pluralsight.com/author/craig-shoemaker" target="_blank">Pluralsight</a>
+        </footer>
+    </div>
+
+    </body>
+</html>

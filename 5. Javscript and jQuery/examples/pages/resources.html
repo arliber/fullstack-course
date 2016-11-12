@@ -1,0 +1,167 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>jQuery: Getting Started</title>
+        <link rel="icon" type="image/png" href="../favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="../js/vendor/highlight/styles/github.css" />
+        <link rel="stylesheet" href="../css/main.css" type="text/css" />
+        <script type="text/javascript" src="../js/vendor/jquery-1.11.2.js"></script>
+        <script type="text/javascript" src="../js/vendor/highlight/highlight.pack.js"></script>
+        <script type="text/javascript" src="../js/vendor/bootstrap.js"></script>
+        <script type="application/javascript" src="../js/app/utils.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">jQuery: Getting Started</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="hello-world.html">Hello World</a></li>
+                <li><a href="example-page.html">Example Page</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container push-down-top-md">
+        <h2 class="push-down-top-md">Resources</h2>
+
+<div role="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#downloading-container" aria-controls="home" role="tab" data-toggle="tab">Downloading</a></li>
+    <li role="presentation"><a href="#context-container" aria-controls="messages" role="tab" data-toggle="tab">jQuery in Context</a></li>
+    <li role="presentation"><a href="#tips-container" aria-controls="profile" role="tab" data-toggle="tab">Coding Tips</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="downloading-container">
+            
+            <div class="row push-down-top-md">
+                <div class="col-sm-4">
+                    <a href="http://jquery.com/" target="_blank"><img src="../img/jquery.png" class="img-responsive" title="jQuery" /></a>
+                </div>
+                <div class="col-sm-6">
+                    <p>You can download jQuery directly from the <a href="http://jquery.com/download/" target="_blank">website</a>
+                    where you have the option to do a direct download, use a CDN or get instructions on using
+                    Bower.</p>
+                    
+                    <p>jQuery is available in verion <code>1.x</code> and <code>2.x</code>. Select version <code>2.x</code> if you do not need to support Internet Explorer 6, 7, or 8,
+                    otherwise version <code>1.x</code> is for you.</p>
+                </div>
+            </div>
+        
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="context-container">
+            <div class="push-down-top-md">
+                <img src="../img/jquery-ecosystem.png" title="jQuery Ecosystem" alt="jQuery Ecosystem" class="img-responsive center" />
+            </div> 
+            <p class="push-down-top-sm"><a href="http://jquery.com">jQuery</a> belongs to a rich JavaScript 
+                ecosystem. jQuery is the foundation for scores of web applications and 
+                is the basis for component development found in <a href="http://jquery-ui.com">jQuery UI</a>.  jQuery UI
+                is a set of user interface controls and interactions based on jQuery. </p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tips-container">
+            
+            <div id="demo-js-container">
+                <p class="push-down-top-sm">While there are many concepts that are valuable for you to learn while mastering jQuery,
+                paying attention to the following items will help you write effective JavaScript.</p>
+                <div class="module-title"><a data-toggle="collapse" href="#function-code" aria-expanded="false">Function Scope</a></div>
+                <div class="collapse" id="function-code">
+                    <p>Variables are in scope only in the context of the executing function. Read
+                    <a href="http://ryanmorr.com/understanding-scope-and-context-in-javascript/" target="_blank">Understanding Scope and Context in JavaScript</a>
+                    for a detailed explanation.</p>
+                    <pre><code class="javascript">var name = 'Craig';
+
+function logName(){
+    console.log(name);
+}
+
+logName();
+
+// --
+
+function logTwitter(){
+    var twitter = '@craigshoemaker';
+    console.log(twitter);
+}
+
+logTwitter();
+
+console.log(twitter); // error
+
+// --
+
+function logFullName(){
+    var first = 'Craig';
+    
+    function logName(){
+        var last = 'Shoemaker';
+        console.log(first + ' ' + last);
+    }
+    
+    logName();
+}
+
+logFullName();</code></pre>
+                </div>
+                
+                <div class="module-title"><a data-toggle="collapse" href="#naming-code" aria-expanded="false">Naming Conventions</a></div>
+                <div class="collapse" id="naming-code">
+                    <p>Prefix variable names with a <code>$</code> for jQuery wrapped results.</p>
+                    <pre><code class="javascript">var $h2 = $('h2'); // jquery
+
+var h2 = document.getElementsByTagName('h2'); // raw DOM</code></pre>
+                    
+                    <p class="push-down-top-md">The following code listing demonstrates why this 
+                    variable prefixing is valuable. Notice the variable
+                    named <code>item</code> as an argument for the <code>each</code> function. This
+                    variable represents the raw DOM element of the list item during the loop. The
+                    jQuery wrapped instance of the item is named <code>$item</code>. This practice
+                    makes it easy to tell which variable represents the raw DOM element and which 
+                    is the result of a jQuery selector.</p>
+            <pre><code class="javascript">var $items = $('#special-features li');
+  
+$items.width('50%')
+      .height('200px')
+      .addClass('highlight bordered')
+      .each(function(index, item){
+           var $item = $(item);
+           $item.text($item.text() + ' ' + 
+              $item.attr('data-feature-id'));
+      });</code></pre>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+    </div>
+        
+        <footer>Created by <a href="http://craigshoemaker.net/about" target="_blank">Craig Shoemaker</a> for <a href="http://www.pluralsight.com/author/craig-shoemaker" target="_blank">Pluralsight</a></footer>
+
+    </body>
+</html>

@@ -1,0 +1,210 @@
+body {
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
+pre {
+    margin-top:10px;
+    font-size:1.15em;
+}
+
+footer {
+    font-size: .65em;
+    text-align: center;
+    color: #999;
+    margin: 25px;
+    margin-top: 100px;
+    padding:45px;
+    border-top: 1px solid #eee;
+}
+
+.expanded {
+    letter-spacing: 2.5px;
+}
+
+label {
+    cursor: pointer;
+    font-size: 0.75em;
+}
+
+img.center {
+    display: block;
+    margin: auto;
+}
+
+.linked-rows a {
+    border:1px solid #fff;
+    display: block;
+    border-radius: 6px;
+    color: inherit;
+}
+
+.linked-rows .row {
+    padding:15px;
+}
+
+.linked-rows a:hover {
+    border:1px solid #eee;
+    background-color: #eee;
+}
+
+h1.big {
+    font-size: 4.5em;
+}
+
+a > .row {
+    margin-top:60px;
+    margin-bottom:60px;
+}
+
+.clear {
+    clear:both;
+}
+
+.hide-me {
+    display: none;
+}
+
+.highlight {
+    background-color: #ff9;
+    padding: 6px;
+    margin: 3px;
+}
+
+.bordered {
+    border:6px solid #999;
+    border-radius: 6px;
+}
+
+nav {
+    padding:10px;
+    font-size: 0.85em;
+}
+
+.push-down-top-sm {
+    margin-top: 20px;
+}
+
+.push-down-top-md {
+    margin-top: 45px;
+}
+
+.push-down-top-lg {
+    margin-top: 85px;
+}
+
+nav .dropdown-menu li,
+input[type="text"] {
+    font-size: 1.25em;
+}
+
+pre.code {
+    margin-top: 50px;
+}
+
+pre > code {
+    background-color: transparent !important;
+}
+
+.dropdown-header {
+    text-transform: uppercase;
+    font-size: 1em !important;
+}
+
+.demo-markup {
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.nav-tabs li a {
+    font-size: 0.65em;
+}
+
+#house-detail {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #dddddd;
+    border-radius: 4px;
+}
+
+#house-detail .logo {
+    margin-bottom: 15px;
+}
+
+#house-detail .command {
+    margin-top:15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+#house-detail .street-address h2 {
+    margin-bottom: 2px;
+}
+
+#house-detail .street-address {
+    margin-bottom: 15px;
+}
+
+#house-detail th {
+    font-size: .75em;
+    width:20%;
+    padding-top: 10px;
+    font-weight: normal;
+}
+
+#house-detail h3 {
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    font-size: .75em;
+    color: #999;
+}
+
+#demo-markup {
+    font-size: .85em;
+}
+
+#demo-js-container .code-label {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    color: #999;
+    margin-top: 20px;
+    display: block;
+}
+
+#demo-js-container .code-label code {
+    text-transform: lowercase;
+}
+
+#demo-js-container .code-label a {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-left: 5px;
+    background-color: #F5F5F5;
+    font-size: .75em;
+}
+
+#demo-js-container .module-title a {
+    margin-top: 55px;
+    display: block;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #eee;
+}
+
+#demo-js-container pre code {
+    font-size: .85em;
+}
+
+.form-section {
+    margin-top:10px;
+}
+
+.form-section > h3 {
+    margin-top:20px;
+}
+
+.console-message {
+    font-size: .7em;
+    margin-top: 12px;
+    margin-bottom: -40px;
+}
