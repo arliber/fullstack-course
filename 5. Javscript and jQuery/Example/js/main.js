@@ -52,8 +52,13 @@ $(function(){
     
     for(i in socialNetworks) {
         var $templi = $('<li>');
+        
         $templi.append('<i class="fa fa-'+socialNetworks[i].iconName+'"></i>');
         $templi.append('<a href="'+socialNetworks[i].link+'">'+socialNetworks[i].name+'</a>');
+        
+        $templi.click(function(){
+            alert($(this).children('a').text() + ' clicked!');
+        });
         
         //Add the new li element to the ul
         $ul.append($templi);
