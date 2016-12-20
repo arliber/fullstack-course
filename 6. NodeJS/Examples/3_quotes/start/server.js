@@ -8,19 +8,21 @@ var port = 5000;
 app.use(express.static('public'));
 
 
-app.get('/staticQuote', function(req, res) {
+
     
-	console.log('Getting static quote..');
+	/*
+		
+		HOMEWORK
 
-	var quotes = require('./quotes.json').quotes;
-	var randomIndex = getRandomInt(0, quotes.length);
+		1) Create a new route that returns a static quote, inside it:
+		2) Load quotes from quotes.json
+		3) Select a RANDOM quote
+		4) Return the result
+		5) Update the client side javascript to get the static quote
 
-	var returnedQuote = quotes[randomIndex];
-	returnedQuote.content = '<p>' + returnedQuote.content + '</p>';
+	*/
 
-	res.status(200).json(returnedQuote);
 
-});
 
 app.get('/dynamicQuote', function(req, res) {
     
@@ -52,9 +54,3 @@ app.get('/dynamicQuote', function(req, res) {
 app.listen(port, function(err){
     console.log('running server on port ' + port);
 });
-
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-}

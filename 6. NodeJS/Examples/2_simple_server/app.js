@@ -12,7 +12,38 @@ app.get('/', function(req, res){
 });
 
 app.get('/arik', function(req, res){
-    res.json({firstName:'Arik', lastName: 'Liber', title:'Fullstack developer'});
+    res.json({
+    	basicInfo: {
+    		firstName:'Arik', lastName: 'Liber', title:'Fullstack developer'
+    	},
+    	socialNetworks: [
+	        {
+	            name: 'Facebook',
+	            link: '#',
+	            'iconName': 'facebook'
+	        },
+	        {
+	            name: 'Linkedin',
+	            link: '#',
+	            'iconName': 'linkedin'
+	        },
+	        {
+	            name: 'Medium',
+	            link: '#',
+	            'iconName': 'medium'
+	        },
+	        {
+	            name: 'Email',
+	            link: '#',
+	            'iconName': 'envelope'
+	        },
+	        {
+	            name: 'Website',
+	            link: '#',
+	            'iconName': 'globe'
+	        }
+		]
+    });
 });
 
 app.listen(port, function(err){
