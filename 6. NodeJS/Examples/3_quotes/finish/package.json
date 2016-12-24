@@ -1,0 +1,16 @@
+{
+  "name": "3_quotes",
+  "version": "1.0.0",
+  "description": "A simple quotes app with a server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Arik Liber",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.79.0"
+  }
+}

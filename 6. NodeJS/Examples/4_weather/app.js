@@ -26,3 +26,11 @@ function weather() {
 }
 
 weather();
+
+/*
+  Assignemnt
+
+  Show an icon at the top of the page (fontawesome?) OR change the whole background of the page based on the current weather.
+  E.g. if the current weather is "Raining" - display an icon or background of rain on the page.
+
+*/
