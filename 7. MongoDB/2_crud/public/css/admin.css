@@ -1,0 +1,49 @@
+body {
+  color: #383838;
+  padding: 20px;
+}
+
+#app {
+  display: flex;
+}
+
+#cv-form {
+   margin-left: 20px;
+}
+
+h1 {
+  border-bottom: 1px solid #28aae2;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#user-list {
+  padding: 10px;
+  flex-basis: 20%;
+  border-right: 1px solid #28aae2;
+}
+
+#user-list li {
+  padding: 10px;
+  border: 1px solid #28aae2;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+#user-list li:hover {
+  padding: 10px;
+  border: 1px solid #28aae2;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background: #28aae2;
+  color: #fff;
+}
