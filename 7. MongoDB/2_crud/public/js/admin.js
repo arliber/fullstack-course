@@ -21,6 +21,7 @@ $(function(){
               $("#firstName").val(data.basicInfo.firstName);
               $("#lastName").val(data.basicInfo.lastName);
               $("#title").val(data.basicInfo.title);
+              $("a").attr("href", "index.html#" + data.basicInfo.firstName);
 
           });
       }
