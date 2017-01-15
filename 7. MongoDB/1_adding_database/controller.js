@@ -28,7 +28,8 @@ function getAllUserNames(res) {
 
   mongodb.connect(connectionUrl, function (err, db) { //Callback function - when connection established
       var collection = db.collection('users');
-      collection.find({}, { "basicInfo.firstName": 1})
+      collection.find({}, { "basicInfo.firstName": 1, _id:0})
+                //SELECT firstName FROM USERS
                 .toArray(function (err, result) { //Callback function - when result arrives
                       if(err) { //Check for error
                         console.error('Error: Unable to get data for user "'+userName+'" with error: ', err); //Log to console`
