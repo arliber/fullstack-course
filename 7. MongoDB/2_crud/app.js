@@ -4,10 +4,11 @@ var controller = require('./controller.js'); //Load the controller we wrote
 
 var app = express(); //Create a new instance of the server
 
-var port = 5000; //This is the port server - we'll use it later
+var port = 3000; //This is the port server - we'll use it later
 
 app.use(express.static('public')); //Serve all the files under /public directly. This will return all the files under /public when you go to /.
-app.use(bodyParser.urlencoded({
+
+app.use(bodyParser.urlencoded({ //This is required to transform the data from the browser (from the form) into JSON
   extended: true
 }));
 
@@ -32,7 +33,7 @@ app.get('/users', function(req, res) { //:userName is a parameter and can be any
 app.post('/user', function(req, res) {
 
     console.log('Saving user..');
-    controller.saveOrUpdateUser(req.body, res);
+    controller.saveOrUpdateUser(req.body, res); //Save or update the user 
 
 });
 
