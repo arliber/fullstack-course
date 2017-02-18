@@ -1,0 +1,8 @@
+body {
+  transition: all .5s ease;
+ }
+ h1 {
+   font-family: Verdana;
+   color: #fff;
+   text-align: center; 
+ }
