@@ -3,7 +3,7 @@ $(function() {
   var counter = 0;
 
   $('#heading').html(localStorage['title'] || 'Just Write');
-  $('#content').html(localStorage['text'] || 'This text is automatically saved every second :) ');
+  $('#content').html(localStorage['text'] || 'This text is automatically saved every second :)');
 
    setInterval(function() {
         //Update counter

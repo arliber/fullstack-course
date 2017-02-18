@@ -31,6 +31,8 @@ Example HTML output:
 
 ## Mini projects
 
+> Don't forget to add all of these to the `javascript` repository
+
 1 . Create a an app that changes the background color of the whole page to random one, when space bar is pressed. To generate a random color use this function:
 
 ```javascript
