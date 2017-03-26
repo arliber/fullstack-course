@@ -1,21 +1,19 @@
 # 4. HTML & CSS
 ## HTML Training
 
-1. Create the HTML for a basic new site, like ynet. Use new HTML5 tags like aside, section, header, footer etc.
-- Add the following elements to the page from [this artciel](https://code.tutsplus.com/tutorials/28-html5-features-tips-and-techniques-you-must-know--net-13520).
-  - New Doctype
+1. Download the HTML boilerplate project
+2. Create an HTML page for a basic news site, like in the example below. Use new HTML5 tags like aside, section, header, footer etc. __NO NEED ADD CSS__
+3. Add the following elements to the page from [this article](https://code.tutsplus.com/tutorials/28-html5-features-tips-and-techniques-you-must-know--net-13520).
   - Make your Content Editable
   - Email Inputs
-  - Placeholders
+  - Use placeholders in inputs
 - Upload the __final__ HTML file (call it HTML_only.html) to a new repository on Github, call it `html-and-css`
 
-## CSS Training
+Example:
+![Example](example.png)
 
-1. Demonstrate the usage of each and every selector from "Selectors" slide on the HTML page you have created above. Add elements if necessary.
-- Use external CSS file
-- Upload the 2 new files (HTML_with_CSS.html and style.css) to `html-and-css` repository
 
-## Flexbox training
-1. Complete all levels of [Flexboxfroggy](http://flexboxfroggy.com/), save the solutions in a TXT file called `flexboxfroggy.txt` and upload to github.
-2. Add more styling to the HTML page you created to turn it into a news-like site, following [this guide](https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/)
-3. Go over the course [examples of Flexbox](https://github.com/LeonLiber/fullstack-course/tree/master/4.%20HTML%20and%20CSS/Flexbox%20examples)
+## CSS with Flexbox training
+1. Go over the course [examples of Flexbox](https://github.com/LeonLiber/fullstack-course/tree/master/4.%20HTML%20and%20CSS/Flexbox%20examples)
+2. Complete all levels of [Flexboxfroggy](http://flexboxfroggy.com/), save the solutions in a TXT file called `flexboxfroggy.txt` and upload to github `html-and-css` repository
+3. Add  styling to the HTML page from HTML training above to make it look like the example [(hint)](https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/)
