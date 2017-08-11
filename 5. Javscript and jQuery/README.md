@@ -1,9 +1,18 @@
 # 5. Javascript and jQuery
 ## Training
 
-1. Create a new repository called `javascript`
-2. Run all the code examples from the playground project, make sure you understand them all
-3. Write an app that lists all your family members (name, age, gender) in <ul>. All data should be stored in an object in the javascript. Upload this app to the new `javascript` repository.
+Run all the code examples from the playground project, make sure you understand them all
+
+
+## Mini projects
+
+> Don't forget to add all of these to the `javascript` repository
+
+### 1. Under folder `family-members`
+
+Write an app that lists all your family members (name, age, gender) in a UL tag.
+
+ All data should be stored in an object in the javascript. Upload this app to the new `javascript` repository.
 
 Example Javascript object:
 ```javascript
@@ -29,11 +38,9 @@ Example HTML output:
 </ul>
 ```
 
-## Mini projects
+### 2. Under folder `random-color`
 
-> Don't forget to add all of these to the `javascript` repository
-
-1 . Create a an app that changes the background color of the whole page to random one, when space bar is pressed. To generate a random color use this function:
+Create a an app that changes the background color of the whole page to random one, when space bar is pressed. To generate a random color use this function:
 
 ```javascript
 function getColor() {
@@ -42,9 +49,16 @@ function getColor() {
 ```
 What exactly does it return?
 
-2 . Create a text editor (title and body only) which saves a your text in `localstorage` every second. When the page is refreshed - should the saved data from the local storage.
+### 3. Under folder `text-editor`
 
-3 . Check out the weather app. Make the background of the whole page change based on the weather (rain image when it rains, sun image when it is sunny etc.)
+Create a text editor (title and body only) which saves a your text in `localstorage` every second. When the page is refreshed - should the saved data from the local storage.
 
-4 . Create a todo list app - the app should have a single  input, when "Enter" key is pressed the text from the input should be added as an `<li>` to a list. Clicking an item inside the list should remove it.
+### 4. Under folder `weather`
+
+Check out the weather app. Make the background of the whole 
+page change based on the weather (rain image when it rains, sun image when it is sunny etc.)
+
+### 5. Under folder `todo-list`
+
+Create a todo list app - the app should have a single  input, when "Enter" key is pressed the text from the input should be added as an `<li>` to a list. Clicking an item inside the list should remove it.
 See example for more info.

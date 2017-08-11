@@ -21,4 +21,3 @@ var family = [
 ```
 3. Update the `random color` project so that the random color is returned from the __server__ and received in the client using AJAX calls. The server should return a random color (e.g. #efefef) when accessed at `/randomColor`
 4. Update the `text editor` project so that the default text is received from the server (currently the text is "Just Write" and "This text is automatically saved every second :)")
-5. Update the `todo list` app so that the todo items are received from the server and saved to server.
