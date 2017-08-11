@@ -12,7 +12,7 @@
 
 1. `xml-and-json` - and place the 4 files from previous chapter inside it
 1. `simple-html-css`
-1. `javascript` - create 4 folders inside: `family-members`, `random-color`, `text-editor`, `todo-list`, `weather`
+1. `javascript` - create 5 folders inside: `family-members`, `random-color`, `text-editor`, `todo-list`, `weather`
 1. `advanced-todo`
 1. `nodejs`
 1. `mongo-todo`
