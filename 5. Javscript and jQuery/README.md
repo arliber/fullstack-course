@@ -60,5 +60,8 @@ page change based on the weather (rain image when it rains, sun image when it is
 
 ### 5. Under folder `todo-list`
 
-Create a todo list app - the app should have a single  input, when "Enter" key is pressed the text from the input should be added as an `<li>` to a list. Clicking an item inside the list should remove it.
+Create a todo list app - the app should have a single  input, when "Enter" key is pressed the text from the input should be added as an `<li>` to a list. 
+- Clicking an item inside the list should remove it.
+- Every new task should have a random text color.
+- All the todo list should be saved in local storage (maybe JSON.stringify could help you?)
 See example for more info.
