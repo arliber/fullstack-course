@@ -1,0 +1,24 @@
+{
+  "name": "classroom-helper",
+  "version": "1.0.0",
+  "description": "All the material for my fullstack developer course",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://leonliber@github.com/LeonLiber/fullstack-course.git"
+  },
+  "author": "Arik Liber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonLiber/fullstack-course/issues"
+  },
+  "homepage": "https://github.com/LeonLiber/fullstack-course#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31"
+  }
+}

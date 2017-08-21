@@ -1,0 +1,56 @@
+body {
+    font-family: 'Encode Sans', sans-serif;
+    background: #706b89;
+    background: -moz-linear-gradient(45deg, #706b89 0%, #413f5b 100%);
+    background: -webkit-linear-gradient(45deg, #706b89 0%,#413f5b 100%);
+    background: linear-gradient(45deg, #706b89 0%,#413f5b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#706b89', endColorstr='#413f5b',GradientType=1 );
+    /*https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats*/
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+#app {
+  width: 80%;
+  margin: 20px auto;
+  min-height: 80%;
+  border-radius: 5px;
+  background: rgba(0,0, 0, 0.2)
+}
+#app > header {
+  height: 120px;
+  display: flex;
+}
+#back {
+  width: 120px;
+  height: 60px;
+  text-align: center;
+  line-height: 120px;
+  cursor: pointer;
+}
+#user-profile {
+  display: flex;
+  align-items: center;
+}
+#user-profile  img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+#user-profile ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+#user-profile ul li {
+  padding: 0 15px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+#user-profile ul b {
+  display: block;
+}
