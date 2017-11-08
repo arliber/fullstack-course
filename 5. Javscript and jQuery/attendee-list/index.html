@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Checkout UI</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style type="text/css">
+    body {
+      margin: 3em
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .unit-price {
+      margin-right: 2rem;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="app">
+    <form>
+      <!-- A placeholder for the list of attendee inputs -->
+      <div class="attendee-list"></div>
+      <div class="row justify-content-center">
+        <div class="col-sm-6"></div>
+        <div class="col-sm-2">
+          <button type="button" class="btn btn-secondary add-attendee">Add Attendee</button>
+        </div>
+      </div>
+      <hr>
+      <div class="row justify-content-center">
+        <div class="col-sm-6">
+          <!-- A placeholder for the unit price -->
+          <span id="unit-price" class="unit-price"></span>
+        </div>
+        <div class="col-sm-2 text-left">
+          <button type="submit" id="checkout-button" class="btn btn-primary">
+            Pay
+            <!-- A placeholder for the checkout total -->
+            <span class="amount"></span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script type="text/template" data-template="attendee">
+        <div class="attendee row justify-content-center">
+            <div class="col-sm-3">
+                <div class="form-group">
+                <label class="sr-only">Name</label>
+                <input 
+                    class="form-control"
+                    placeholder="Enter name"
+                    name="attendees[][name]"
+                    required>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                <label class="sr-only">Email address</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter email"
+                    name="attendees[][email]"
+                    required>
+                </div>
+            </div>
+            <div class="col-sm-2 text-left">
+                <button type="button" class="btn btn-light remove-attendee">
+                    <span aria-hidden="true">×</span> Remove
+                </button>
+            </div>
+        </div>
+    </script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
