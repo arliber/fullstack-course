@@ -1,0 +1,109 @@
+<html>
+<head>
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+<script>
+		
+	$(function(){
+			
+			$.ajax({
+				url: 'https://reqres.in/api/users?page=1',
+				type: 'GET',
+				success: function(response) {
+					console.log(response);
+					showUsers(response.data);
+					showPages(response.total_pages);
+				},
+				error: function() {
+					alert('something went wrong!');
+				}
+			});
+			
+			function showUsers(users) {
+				for(var i in users) {
+					var userHTML = '<li>';
+					userHTML += '<section>';
+					userHTML += '<img width="50" height="50" src="'+users[i].avatar+'" />';
+					userHTML += '<h3>'+users[i].first_name+' '+users[i].last_name+'</h3>';
+					userHTML += '</section>';
+					userHTML += '<section class="userId">'+users[i].id+'</section>';
+					userHTML += '</li>';
+					$('ul#users').append(userHTML);
+				}					
+			}
+			
+			
+			function showPages(pagesCount) {
+				for(var i = 1; i<=pagesCount; i++) {
+					$('ul#pagination').append('<li>'+i+'</li>');
+				}
+			}
+			
+	});
+		
+</script>
+<style>
+	* { margin: 0; padding: 0; font-family: Arial; }
+	#container {
+		padding-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	ul#users { list-style: none; }
+	ul#users li {
+		border-top: 1px solid #5d1bb5;
+		width: 500px;
+		display: flex;
+		justify-content: space-between;
+		padding: 5px;
+	}
+	ul#users li:nth-child(odd) {
+		    background: #e8e0ff;
+	}
+	ul#users li:hover {
+		background: #f6f5f9;
+	}
+	ul#users li section {
+		display: flex;
+		align-items: center;
+	}
+	img {
+		margin-right: 20px;
+	}
+	.userId {
+		color: #989898;
+	}
+	
+	/*PAGINTATION*/
+	#pagination {
+		margin-top: 10px;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#pagination li {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		border: 1px solid #5d1bb5;
+		margin-right: 5px;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+<section id="container">
+	<h1>USERS</h1>
+	<ul id="users"></ul>
+	<ul id="pagination"></ul>
+</section>	
+</body>
+</html>
