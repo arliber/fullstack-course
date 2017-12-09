@@ -1,0 +1,253 @@
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.3/sweetalert2.min.css" />
+  <script>
+    $(function() {
+
+      var currentPage = 1;
+      var totalPages;
+
+      function getUsers(page) {
+        $('#users').html('');
+        $('#pagination').html('');
+
+        $.ajax({
+          url: 'https://reqres.in/api/users?page=' + page,
+          type: 'GET',
+          success: function(response) {
+            $('#loader').hide();
+            console.log(response);
+            totalPages = response.total_pages;
+            showUsers(response.data);
+            showPages(response.total_pages, page);
+          },
+          error: function() {
+            alert('something went wrong!');
+          }
+        });
+      }
+
+      getUsers(1);
+      $('#pagination').on('click', 'li', function() {
+        $('#loader').show();
+        currentPage = Number($(this).text());
+        getUsers($(this).text());
+      });
+
+      // Pagination
+      $('#prev').on('click', function() {
+        $('#loader').show();
+          currentPage--;
+          if(currentPage == 0){
+            currentPage =4;
+          }
+          getUsers(currentPage);
+      });
+
+      $('#next').on('click', function() {
+          $('#loader').show();
+          currentPage++;
+          if(currentPage > 4){
+            currentPage = 1;
+          }
+          getUsers(currentPage);
+      });
+
+      function selectPageByNumber(pageNumber){
+        $("#pagination li").removeClass("current");
+        $("#pagination li:nth-child("+pageNumber+")").addClass("current");
+      }
+
+      function showUsers(users) {
+        for (var i in users) {
+          var userHTML = '<li>';
+          userHTML += '<section>';
+          userHTML += '<img width="50" height="50" src="' + users[i].avatar + '" />';
+          userHTML += '<h3>' + users[i].first_name + ' ' + users[i].last_name + '</h3>';
+          userHTML += '</section>';
+          userHTML += '<section class="userId">' + users[i].id + '</section>';
+          userHTML += '</li>';
+          $('ul#users').append(userHTML);
+        }
+      }
+
+      function showUserInfo(id,li){
+        $.ajax({
+          url: 'https://reqres.in/api/users?id=' + id,
+          type: 'GET',
+          success: function(response) {
+            var user = response.data;
+            var steps = [
+              {
+                imageUrl: user.avatar,
+                title:user.first_name,
+                text:user.last_name,
+                showCancelButton: true,
+                confirmButtonText: 'Edit',
+                showCancelButton: true
+              },
+              {
+                imageUrl: user.avatar,
+                html: 'Change first name',
+                input: 'text',
+                showCancelButton: true,
+                confirmButtonText: 'Next',
+                showCancelButton: true,
+                preConfirm: function(text){
+                  $.ajax({
+                    url:'https://reqres.in/api/users/' + id,
+                    type: 'PUT',
+                    data: {
+                      "first_name": text
+                    },
+                    success: function(response){
+                      $(li).find('h3').text(response.first_name);
+                    }
+                  })
+                }
+              },
+              {
+                imageUrl: user.avatar,
+                html: 'Change last name',
+                input: 'text',
+                showCancelButton: true,
+                confirmButtonText: 'Save',
+                showCancelButton: true,
+                preConfirm: function(text){
+                  $.ajax({
+                    url:'https://reqres.in/api/users/' + id,
+                    type: 'PUT',
+                    data: {
+                      "last_name": text
+                    },
+                    success: function(response){
+                      $(li).find('h3').append(" " + response.last_name);
+                    }
+                  })
+                }
+              }
+            ]
+            swal.queue(steps).then(function(result){
+              if(result.value){
+                swal({
+                  title: 'All done!',
+                  confirmButtonText: 'Ok',
+                })
+              }
+            })
+          },
+          error: function() {
+            alert('something went wrong!');
+          }
+        });
+      };
+      $('#users').on('click','li',function(){
+        var id = $(this).children(".userId").text();
+        var li = $(this);
+        showUserInfo(id,li);
+      });
+
+
+
+      function showPages(pagesCount, page) {
+        for (var i = 1; i <= pagesCount; i++) {
+          if (i === Number(page)) {
+            $('ul#pagination').append('<li class="current">' + i + '</li>');
+          } else {
+            $('ul#pagination').append('<li>' + i + '</li>');
+          }
+        }
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.3/sweetalert2.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial;
+    }
+
+    #container {
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    ul#users {
+      list-style: none;
+    }
+
+    ul#users li {
+      border-top: 1px solid #5d1bb5;
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+    }
+
+    ul#users li:nth-child(odd) {
+      background: #e8e0ff;
+    }
+
+    ul#users li:hover {
+      background: #f6f5f9;
+    }
+
+    ul#users li section {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      margin-right: 20px;
+    }
+
+    .userId {
+      color: #989898;
+    }
+
+    /*PAGINTATION*/
+
+    #pagination {
+      margin-top: 10px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #pagination li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border: 1px solid #5d1bb5;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    .current {
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="container">
+    <h1>USERS</h1>
+    <img src="loader.gif" id="loader" />
+    <ul id="users"></ul>
+    <button id="prev"><</button>
+    <ul id="pagination"></ul>
+    <button id="next">></button>
+  </section>
+</body>
+
+</html>
